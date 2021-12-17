@@ -11,6 +11,7 @@ function HomeScreen({ navigation }) {
  useEffect(() => {
    navigation.setOptions({
      headerRight: () => <Button onPress={addColor} title="Add colour" />,
+     headerLeft: () => <Button onPress={reset} title="Reset" />,
    });
  });
 
