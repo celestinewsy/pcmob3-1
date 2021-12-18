@@ -43,21 +43,8 @@ function HomeScreen({ navigation }) {
 
  return (
    <View style={styles.container}>
-     <TouchableOpacity
-       style={{ height: 40, justifyContent: "center" }}
-       onPress={addColor}
-     >
-       <Text style={{ color: "red" }}>Add colour</Text>
-     </TouchableOpacity>
 
-     <TouchableOpacity
-      style={{ height: 40, justifyContent: "center" }}
-      onPress={reset}
-    >
-      <Text style={{ color: "red" }}>Reset</Text>
-    </TouchableOpacity>
-    
-     <FlatList style={styles.list} data={colorArray} renderItem={renderItem} />
+     <FlatList style={styles.list} data={colorArray} renderItem={renderItem} numColumns={4} />
    </View>
  );
 }
@@ -106,7 +93,7 @@ const styles = StyleSheet.create({
    width: "100%",
  },
  detailText: {
-   fontSize: 24,
+   fontSize: 40,
    marginBottom: 20,
  },
 });
